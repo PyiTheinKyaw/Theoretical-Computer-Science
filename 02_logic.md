@@ -4,13 +4,13 @@ Two systems of logic are commonly used in mathematics: propositional logic and p
 1. Propositional Logic
 
 - A proposition is a statement which is true or false (but never both).
-- It also can’t contain variables, e.g. ($x \geq 5 $ isn't proposition )
+- It also can’t contain variables, e.g. ($x \geq 5$ isn't proposition )
 - Sentence fragments without verbs (e.g. “bright blue flowers”)
 - arithmetic expressions (e.g. $5 + 17$ ), aren’t propositions
 
 Because they don’t state a claim.
 
-2. Predicate logic:  is an upgrade that adds variables. e.g. ($x \geq 5 $ )
+2. Predicate logic:  is an upgrade that adds variables. e.g. ($x \geq 5$ )
 #
 
 ### 1.1 Complex Proposition ###
@@ -48,7 +48,7 @@ from p”.
 
 The shorthand for this conditional is $p \implies q$ and its truth table is -
 
-|p|q|$ p\implies q $|
+|p|q|$p\implies q$|
 |---|---|---|
 |T|T|T|
 |T|F|F|
@@ -75,7 +75,7 @@ The phrase ***“p implies q, and conversely”*** means that change the role of
 
 This is not true biconditionally. It's possible to get good grades without studying hard (e.g., through luck). Converse is the logical inversion of the consequent, not always equivalent to the original statement.
 
-|p|q|$ q \implies p $|
+|p|q|$ q \implies p$|
 |---|---|---|
 |T|T|T|
 |T|F|T|
@@ -95,7 +95,7 @@ This is true biconditionally.
 
 To see this, compare the previous truth table with this one:
 
-|p|q|$ q \iff p $|
+|p|q|$q \iff p$|
 |---|---|---|
 |T|T|T|
 |T|F|F|
