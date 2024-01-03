@@ -75,7 +75,7 @@ The phrase ***“p implies q, and conversely”*** means that change the role of
 
 This is not true biconditionally. It's possible to get good grades without studying hard (e.g., through luck). Converse is the logical inversion of the consequent, not always equivalent to the original statement.
 
-|p|q|$ q \implies p$|
+|p|q|$q \implies p$|
 |---|---|---|
 |T|T|T|
 |T|F|T|
