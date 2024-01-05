@@ -10,7 +10,11 @@ Two systems of logic are commonly used in mathematics: propositional logic and p
 
 Because they don’t state a claim.
 
-2. Predicate logic:  is an upgrade that adds variables. e.g. ($x \geq 5$ )
+2. Predicate logic:  is an upgrade that adds variables. e.g. ($x \geq 5$)
+
+    Propositions are a helpful beginning but too rigid to represent most of the interesting bits of mathematics.
+
+    To do this, we need predicate logic, which allows variables and predicates that take variables as input. A predicate is a statement that becomes true or false if you substitute in values for its variables.
 #
 
 ### 1.1 Complex Proposition ###
@@ -172,4 +176,207 @@ Similar rules in other domains (e.g. set theory) are also called ***De Morgan’
 
 #
 
-### 1.9 Mechanical Rules ###
+### 1.9 Some Useful Logical equivalence (Commutativity and associativity) ###
+
+Logical equivalences are powerful tools for simplifying arguments and proving statements in various fields. 
+
+- $\lor$ and $\land$ are commutative, e.g. p ∧ q ≡ q ∧ p.
+
+|Logical Equivalences|Description|
+|---|---|
+|$p \lor q \equiv q \lor p$|logical OR is commutative|
+|$p \land q \equiv q \land p$|logical AND is commutative|
+|$p \lor (q \lor r) \equiv (p \lor q) \lor r $|logical OR is associative|
+|$p \land (q \land r) \equiv (p \land q) \land r$|logical AND is associative|
+
+
+The distributive laws, however, work slightly differently from those in algebra where as in logic we have two rules:
+
+$$
+\begin{array}{c}
+p \lor (q \land r) \equiv (p \lor q) \land (p \lor r) \\
+p \land (q \lor r) \equiv (p \land q) \lor (p \land r) \\
+\end{array}
+$$
+
+So, in logic, you can distribute either operator over the other. Also, arithmetic has a clear rule that multiplication is done first, so the righthand side doesn’t require parentheses. The order of operations is less clear for the logic, so more parentheses are required.
+
+#
+
+### 1.10 Negating propositions ###
+
+An important use of logical equivalences is to help you correctly state the negation of a complex proposition, i.e. what it means for the complex proposition not to be true. Negating a claim is crucial in logic (and math) for several reasons:
+
+**1. Exploring Alternative Truths:**
+
+- Logic deals with exploring all possible truth values of statements and arguments. Negation allows us to consider the opposite of a claim, uncovering potential scenarios where the original claim might not hold true. This broadens our understanding of the statement and potential consequences.
+
+**2. Constructing Valid Arguments:**
+
+- Many logical arguments rely on negations to establish valid reasoning. Common argument forms like contrapositive and modus tollens use negation to logically derive conclusions from existing statements. These argument forms are essential for rigorous proofs and analysis in various fields.
+
+**3. Identifying Contradictions:**
+
+- Negation helps identify contradictions in a set of statements. If the negation of a claim logically follows from another claim, it reveals that both claims cannot be true together. This reveals inconsistent information and helps detect errors in reasoning.
+
+**4. Specifying Precise Conditions:**
+
+- Negation allows for precise formulation of conditions and constraints. By stating what is not true, we can more accurately define what must be true for a statement or argument to hold. This precision is crucial in fields like mathematics and computer science where clear definitions and relationships are vital.
+
+**5. Building Complex Theorems:**
+
+- Logic, including negation, provides the building blocks for constructing intricate theorems and proofs. Complex logical statements often involve nested negations to express nuanced conditions and relationships. The ability to manipulate and reason with negations becomes essential for advanced mathematical and logical reasoning.
+
+**Overall, negation is not just about saying "no" to a claim. It's a powerful tool for exploring alternative truths, constructing valid arguments, identifying contradictions, specifying conditions, and building complex logical structures. Negation allows us to reason more comprehensively and rigorously, pushing the boundaries of what we can understand and prove.**
+
+For example, suppose we have a claim like “If M is regular, then M is paracompact or M is not Lindel¨of.”
+
+Let `r` be “M is regular”, `p` be “M is paracompact”, and `l` be “M is Lindel¨of.” Then the claim would be $r \implies (p \lor \neg l)$.
+
+The negation of $r \implies (p \lor \neg l)$ is $\neg(r \implies (p \lor \neg l))$. 
+
+$$
+\begin{array}{c}
+\neg(r \implies (p \lor \neg l)) \\
+\equiv r \land \neg (p \lor \neg l) \\
+\equiv r \land \neg p \land l \\
+\end{array}
+$$
+
+So, The negation of $\neg(r \implies (p \lor \neg l))$ is  $r \land \neg p \land l $. So the negation of our original claim is “M is regular and M is not paracompact and M is Lindel¨of.” 
+#
+
+### 2.1 Quantifiers in Math: Exploring Existence and Universality 
+
+Quantifiers are powerful tools in mathematics that allow us to talk about entire sets of numbers or objects at once. They help us express statements about "some" or "all" elements within a set, providing concise and powerful ways to describe mathematical properties. Here's a breakdown of the terms you mentioned:
+
+**1. Existential Quantifier ($\exists$): "There exists..."**
+
+- This symbol indicates that at least one element within a set satisfies a specific condition.
+- For example, the statement "$\exists x \in N, x^2 = 4$" means ***"there exists a natural number x such that its square is 4"***. The solution in this case is x = 2.
+- This quantifier helps us express the possibility of an element with a certain property existing within the set.
+
+**2. Universal Quantifier ($\forall$): "For all..."**
+
+- This symbol indicates that every element within a set satisfies a specific condition.
+- For example, the statement "$\forall x \in R, x^2 ≥ 0$" means ***"for all real numbers x, their square is greater than or equal to 0"***. This is true for all real numbers.
+- This quantifier helps us express the universality of a property, ensuring it holds true for every element without exception.
+
+**3. Unique Existence Quantifier ($\exists !$): "There exists exactly one..."**
+
+- This symbol combines the idea of existence with uniqueness. It indicates that exactly one element within a set satisfies a specific condition.
+- For example, the statement "$\exists !x \in Z, x^2 - 9 = 0$" means **"there exists exactly one integer x such that its square minus 9 is equal to 0"**. The solution is x = 3.
+- This quantifier helps us express the existence of a single element with a specific property, eliminating ambiguity and ensuring its one-and-only existence within the set.
+
+**Purpose of Quantifiers:**
+
+- Quantifiers provide conciseness and clarity in expressing mathematical statements, allowing us to talk about entire sets of elements instead of listing them individually.
+- They enable us to formulate general theorems and principles that apply to all or some elements within a specific set.
+- They are crucial in various branches of mathematics, including calculus, number theory, and set theory.
+
+**Understanding and utilizing quantifiers effectively is essential for building a strong foundation in mathematics. Practicing using them in different contexts will solidify your comprehension and unlock their power for describing intricate mathematical relationships.**
+
+**Bonus Tip:** You can combine quantifiers to express even more complex relationships. For example, "∃x ∈ R ∀y ∈ N, x + y < 10" means "there exists a real number x such that for all natural numbers y, their sum is less than 10".
+
+#
+
+### 2.2 Useful Noation
+
+If you want to state a claim about two numbers, you can use two quantifiers as in:
+$$
+\forall x \in R, \forall y \in R, x + y \geq x \text{ (which is wrong!)}
+$$
+
+In abbreviated form,
+$$
+\forall x, y \in R, x + y \geq x
+$$
+
+Shorthand of Qutifier are also use along with Implication,
+$$
+\forall x, \text{if } p(x), \text{then } q(x)
+$$
+#
+
+### 2.3 Notation for other contents (Like in 2D points)
+
+When writing mathematics that involves 2D points and quantifiers, you have several notational options.
+- You can write something like $\forall x, y \in Z$ (“for any integers x and y”) and then later refer to the pair $(x, y)$. 
+- Or you can treat the pair $(x, y)$ as a single variable, whose replacement set is all 2D points.
+
+For example, the following says that the real plane ($R^2$) contains a point on the unit circle:
+
+$$
+\exists (x,y) \in R^2, x^2 + y^2 = 1
+$$
+
+Another approach is to write something like
+$$
+\exists p \in R^2, \text{ p is on the unit circle}
+$$
+When you later need to make precise what it means to be “on the unit circle,” you will have to break up p into its two coordinates. At this point, you say that since p is a point on the plane, it must have the form $(x, y)$, where x and y are real numbers. This defines the component variables you need to expand the definition of “on the unit circle” into the equation $x^2 + y^2 = 1$.
+
+#
+
+### 2.4 Negation statements with quantifiers
+Suppose we've claim like $\forall x \in R, x^2 ≥ 0$. This claim will be `false` if there is at least one real number x such that $x^2 < 0$. Think about that, If x is Real number, what is the propositional statement of $0^2 <0$. It's `False`.
+
+In general, a statement of the form **“for all x in A, P(x)”** is false exactly when there is some value x in A such that P(x) is `false`. In other words, when ***“there exists x in A such that P(x) is not true”***. In shorthand notation:
+
+$$
+\neg (\forall x, P(x)) \equiv \exists x, \neg P(x)
+$$
+
+this is a bit like the de Morgan’s laws: when you move the negation across the operator, you change it to the other similar operator. So, If we have something like this:
+$$
+\neg (\exists x, P(x)) \equiv \forall x, \neg P(x)
+$$
+
+And if we have something like this,
+$$
+\forall x, P(x) \implies (Q(x) \land R(x))
+$$
+
+Its negation is
+
+$$
+\begin{array}{c}
+\neg (\forall x, P(x) \implies (Q(x) \land R(x))) 
+\equiv \exists x,\neg (P(x) \implies (Q(x) \land R(x))) \\
+\equiv \exists x, P(x) \land \neg (Q(x) \land R(x)) \\
+\equiv \exists x, P(x) \land (\neg Q(x) \lor \neg R(x))
+\end{array}
+$$
+
+#
+### 2.5 Binding and scope
+
+A quantifier is said to “bind” the variable it defines. The “bound” variable in a quantification is only defined for a limited time, called the “scope” of the binding. This is usually the end of the quantified statement or the end of the line, but you sometimes have to use common sense about what the author intended. Parentheses are often used to indicate that
+the author intends a shorter scope.
+
+Variables in computer programs also have a “scope” over which their declaration is valid, e.g. the entire program, a single code file, or local to an individual function/procedure/method. If you try to use a variable outside the scope of its definition, you’ll get a compiler error.
+
+**Free Variables:**
+
+* **Definition:** A variable that doesn't have a specific value assigned to it within the context of a statement or expression. It remains "unbound," meaning its value can vary freely.
+* **Example:** In the expression "x + y > 3," both `x` and `y` are free variables because they haven't been given definite values or restricted by quantifiers. The truth of the statement depends on the specific values chosen for `x` and `y`.
+
+**Bound Variables:**
+
+* **Definition:** A variable that has been "bound" to a specific range of values using a quantifier (like "for all" or "there exists") or assigned a definite value.
+* **Examples:**
+    * In the statement "∀x ∈ R, x^2 ≥ 0," the variable `x` is bound by the universal quantifier ∀, indicating it applies to all real numbers.
+    * In the equation "y = 2x + 1," the variable `y` is bound to the value determined by the expression "2x + 1".
+
+**Key Points:**
+
+- Free variables allow for flexibility and generality in expressions and statements, representing potential variations in values.
+- Bound variables provide specificity and clarity, ensuring that certain properties or relationships hold true within defined constraints.
+- Understanding the distinction between free and bound variables is crucial for accurately interpreting and manipulating mathematical statements, especially in logic, set theory, and computer science.
+
+**Additional Insights:**
+
+- Free variables often play a key role in defining functions and formulas, where their values can be inputted to produce different outputs.
+- Bound variables are essential for constructing proofs and theorems, as they allow us to establish general truths that hold for a defined set of elements.
+- In programming, free variables are often used as parameters for functions, while bound variables are used within function bodies to represent specific values or data structures.
+#
