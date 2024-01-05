@@ -253,19 +253,19 @@ Quantifiers are powerful tools in mathematics that allow us to talk about entire
 **1. Existential Quantifier ($\exists$): "There exists..."**
 
 - This symbol indicates that at least one element within a set satisfies a specific condition.
-- For example, the statement "$\exists x \in N, x^2 = 4$" means ***"there exists a natural number x such that its square is 4"***. The solution in this case is x = 2.
+- For example, the statement $\exists x \in N, x^2 = 4$ means ***"there exists a natural number x such that its square is 4"***. The solution in this case is x = 2.
 - This quantifier helps us express the possibility of an element with a certain property existing within the set.
 
 **2. Universal Quantifier ($\forall$): "For all..."**
 
 - This symbol indicates that every element within a set satisfies a specific condition.
-- For example, the statement "$\forall x \in R, x^2 ≥ 0$" means ***"for all real numbers x, their square is greater than or equal to 0"***. This is true for all real numbers.
+- For example, the statement $\forall x \in R, x^2 ≥ 0$ means ***"for all real numbers x, their square is greater than or equal to 0"***. This is true for all real numbers.
 - This quantifier helps us express the universality of a property, ensuring it holds true for every element without exception.
 
 **3. Unique Existence Quantifier ($\exists !$): "There exists exactly one..."**
 
 - This symbol combines the idea of existence with uniqueness. It indicates that exactly one element within a set satisfies a specific condition.
-- For example, the statement "$\exists !x \in Z, x^2 - 9 = 0$" means **"there exists exactly one integer x such that its square minus 9 is equal to 0"**. The solution is x = 3.
+- For example, the statement $\exists !x \in Z, x^2 - 9 = 0$ means **"there exists exactly one integer x such that its square minus 9 is equal to 0"**. The solution is x = 3.
 - This quantifier helps us express the existence of a single element with a specific property, eliminating ambiguity and ensuring its one-and-only existence within the set.
 
 **Purpose of Quantifiers:**
@@ -288,14 +288,10 @@ $$
 $$
 
 In abbreviated form,
-$$
-\forall x, y \in R, x + y \geq x
-$$
+$$\forall x, y \in R, x + y \geq x$$
 
 Shorthand of Qutifier are also use along with Implication,
-$$
-\forall x, \text{if } p(x), \text{then } q(x)
-$$
+$$\forall x, \text{if } p(x), \text{then } q(x)$$
 #
 
 ### 2.3 Notation for other contents (Like in 2D points)
@@ -332,10 +328,8 @@ $$
 \neg (\exists x, P(x)) \equiv \forall x, \neg P(x)
 $$
 
-And if we have something like this,
-$$
-\forall x, P(x) \implies (Q(x) \land R(x))
-$$
+And if we have something like this, 
+$$\forall x, P(x) \implies (Q(x) \land R(x))$$
 
 Its negation is
 
