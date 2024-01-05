@@ -283,9 +283,8 @@ Quantifiers are powerful tools in mathematics that allow us to talk about entire
 ### 2.2 Useful Noation
 
 If you want to state a claim about two numbers, you can use two quantifiers as in:
-$$
-\forall x \in R, \forall y \in R, x + y \geq x \text{ (which is wrong!)}
-$$
+
+$$\forall x \in R, \forall y \in R, x + y \geq x \text{ (which is wrong!)}$$
 
 In abbreviated form,
 $$\forall x, y \in R, x + y \geq x$$
