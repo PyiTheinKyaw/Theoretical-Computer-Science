@@ -306,9 +306,9 @@ $$
 $$
 
 Another approach is to write something like
-$$
-\exists p \in R^2, \text{ p is on the unit circle}
-$$
+
+$$\exists p \in R^2, \text{ p is on the unit circle}$$
+
 When you later need to make precise what it means to be “on the unit circle,” you will have to break up p into its two coordinates. At this point, you say that since p is a point on the plane, it must have the form $(x, y)$, where x and y are real numbers. This defines the component variables you need to expand the definition of “on the unit circle” into the equation $x^2 + y^2 = 1$.
 
 #
