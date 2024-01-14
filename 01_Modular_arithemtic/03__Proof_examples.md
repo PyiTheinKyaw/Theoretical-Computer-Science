@@ -77,6 +77,7 @@ $$
 Approach 1 (Pattern observation): 
 
 ***4.1 Resolve $5^{51}$ as first,***
+
 $$
 5^1 \cong 5 \pmod{6} \\
 5^2 \cong 1 \pmod{6} \\
@@ -86,6 +87,7 @@ $$
 $$
 
 ***4.2 Resolve $317$ as last,***
+
 $$
 317 - 6 * 52 = 5 \\
 317 \cong 5 \pmod{6}
@@ -98,3 +100,5 @@ $$
 317 * 5^{51} \cong 1 \pmod{6} \\
 \text{Since, remainder(R) is 1}
 $$
+
+#
