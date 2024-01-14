@@ -63,7 +63,7 @@ $$
 $$
 a \cong 1 \pmod 5 \\
 b \cong 2 \pmod 5 \\
-c \cong 3 \pmod 5 \\
+c \cong 3 \pmod 5
 $$
 
 $$
