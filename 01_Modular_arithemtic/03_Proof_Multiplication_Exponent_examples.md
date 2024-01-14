@@ -19,8 +19,6 @@ Pharase: "a is congruent to b module n".
 
         $121 - 4 * 30 = 1, 121 \cong 1 \pmod{4}$
 
-#
-
 ## Multiplication and Exponent
 2. Find the remainder when the following are divided by 4:
 - $15^{15}$
@@ -28,10 +26,11 @@ Pharase: "a is congruent to b module n".
 - 100!
 
 ### $15^{15}$
-$$
+$$ \begin{array}{c}
 15 ÷ 4 = 3 \text{ R 3}, 15 \cong 3 \pmod{4} \\
 15 \cong 3 \cong -1 \pmod{4} \\
 (-1)^{15} = -1
+\end{array}
 $$
 
 
