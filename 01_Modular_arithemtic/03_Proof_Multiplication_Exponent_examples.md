@@ -62,7 +62,7 @@ $$
 $$ \begin{array}{c}
 a \cong 1 \pmod 5 \\
 b \cong 2 \pmod 5 \\
-c \cong 3 \pmod 5
+c \cong 3 \pmod 5 \\
 \end{array}
 $$
 
@@ -84,7 +84,7 @@ $$
     5^2 \cong 1 \pmod{6} \\
     5^3 \cong 5 \pmod{6} \\
     \ldots \\
-    5^{51} \text{since, power of 5 is odd, then } 5^{51} \cong 5 \pmod{6}
+    5^{51} \text{since, power of 5 is odd, then } 5^{51} \cong 5 \pmod{6} \\
     \end{array}
     $$
 
@@ -92,7 +92,7 @@ $$
 
     $$ \begin{array}{c}
     317 - 6 * 52 = 5 \\
-    317 \cong 5 \pmod{6}
+    317 \cong 5 \pmod{6} \\
     \end{array}
     $$
 
@@ -102,7 +102,7 @@ $$
     317 * 5^{51} \cong 5 \pmod{6} * 5 \pmod{6} \\
     317 * 5^{51} \cong -1 \pmod{6} * -1 \pmod{6} \\
     317 * 5^{51} \cong 1 \pmod{6} \\
-    \text{Since, remainder(R) is 1}
+    \text{Since, remainder(R) is 1} \\
     \end{array}
     $$
 
@@ -112,17 +112,19 @@ $$
 
     ***5.1 Resolve $24^{50}$ as first,***
 
-    $$
+    $$ \begin{array}{c}
     24 ÷ 13 = 1 \text{ R 11} \\
     24 \cong 11 \pmod{13} \\
-    \text{mod out, } 24 \cong 11 \cong -2 \pmod{13}
+    \text{mod out, } 24 \cong 11 \cong -2 \pmod{13} \\
+    \end{array}
     $$
 
     ***5.2 Resolve $15^{50}$ as first,***
 
-    $$
+    $$ \begin{array}{c}
     15 ÷ 13 = 1 \text{ R 2} \\
-    15 \cong 2 \pmod{13}
+    15 \cong 2 \pmod{13} \\
+    \end{array}
     $$
 
     **5.3 Approach 1: Apply Fermat's Little Theorem**
@@ -131,14 +133,15 @@ $$
 
     In this case: $13$ is prime, and neither 11 nor 2 is divisible by 13, so:
 
-    $$
+    $$ \begin{array}{c}
         11^{13-1} = 11^{12} \cong 1 \pmod{13} \\
-        2^{13-1} = 2^{12} \cong 1 \pmod{13}
+        2^{13-1} = 2^{12} \cong 1 \pmod{13} \\
+        \end{array}
     $$
 
     ***Then,***
 
-    $$
+    $$ \begin{array}{c}
         24^{50} - 15^{50} \cong (11)^{50} - (2)^{50} \pmod{13} \\
         24^{50} - 15^{50} \cong (11^{12})^4 . 11^{2} - (2^{12})^{4} . 2^{2} \pmod{13} \\
         24^{50} - 15^{50} \cong (1)^4 . 11^{2} - (1)^{4} . 2^{2} \pmod{13} \\
@@ -146,6 +149,7 @@ $$
         24^{50} - 15^{50} \cong 117 \pmod{13} \\
         \text{Mod out, } 117 \cong 13 \cong 0 \pmod{13} \\
         \text{Remainder is 0} \\
+        \end{array}
     $$
 
 
@@ -153,11 +157,12 @@ $$
 
     ***Then,***
 
-    $$
+    $$ \begin{array}{c}
         24^{50} - 15^{50} \cong (11)^{50} - (2)^{50} \pmod{13} \\
         24^{50} - 15^{50} \cong (-2)^{50} - 2^{50} \pmod{13} \\
 
         24^{50} - 15^{50} \cong +2^{50} - 2^{50} \pmod{13} \\
         \text{Remainder is 0} \\
+        \end{array}
     $$
 #
