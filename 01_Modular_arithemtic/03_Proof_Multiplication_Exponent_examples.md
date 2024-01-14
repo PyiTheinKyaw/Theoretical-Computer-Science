@@ -133,27 +133,27 @@ $$
 
 **5.3 Approach 1: Apply Fermat's Little Theorem**
 
-***Fermat's Little Theorem states: If p is a prime number and a is any integer not divisible by p, then $a^{p−1} \cong 1 \pmod{p}$.***
+***Fermat's Little Theorem states: If p is a prime number and a is any integer not divisible by p, then $a^{p−1} \cong 1 \pmod{p}$ .***
 
 In this case: $13$ is prime, and neither 11 nor 2 is divisible by 13, so:
 
 $$ \begin{array}{c}
-    11^{13-1} = 11^{12} \cong 1 \pmod{13} \\
-    2^{13-1} = 2^{12} \cong 1 \pmod{13}
-    \end{array}
+11^{13-1} = 11^{12} \cong 1 \pmod{13} \\
+2^{13-1} = 2^{12} \cong 1 \pmod{13}
+\end{array}
 $$
 
 ***Then,***
 
 $$ \begin{array}{c}
-    24^{50} - 15^{50} \cong (11)^{50} - (2)^{50} \pmod{13} \\
-    24^{50} - 15^{50} \cong (11^{12})^4 . 11^{2} - (2^{12})^{4} . 2^{2} \pmod{13} \\
-    24^{50} - 15^{50} \cong (1)^4 . 11^{2} - (1)^{4} . 2^{2} \pmod{13} \\
-    24^{50} - 15^{50} \cong 121 - 4 \pmod{13} \\
-    24^{50} - 15^{50} \cong 117 \pmod{13} \\
-    \text{Mod out, } 117 \cong 13 \cong 0 \pmod{13} \\
-    \text{Remainder is 0}
-    \end{array}
+24^{50} - 15^{50} \cong (11)^{50} - (2)^{50} \pmod{13} \\
+24^{50} - 15^{50} \cong (11^{12})^4 . 11^{2} - (2^{12})^{4} . 2^{2} \pmod{13} \\
+24^{50} - 15^{50} \cong (1)^4 . 11^{2} - (1)^{4} . 2^{2} \pmod{13} \\
+24^{50} - 15^{50} \cong 121 - 4 \pmod{13} \\
+24^{50} - 15^{50} \cong 117 \pmod{13} \\
+\text{Mod out, } 117 \cong 13 \cong 0 \pmod{13} \\
+\text{Remainder is 0}
+\end{array}
 $$
 
 
@@ -162,11 +162,11 @@ $$
 ***Then,***
 
 $$ \begin{array}{c}
-    24^{50} - 15^{50} \cong (11)^{50} - (2)^{50} \pmod{13} \\
-    24^{50} - 15^{50} \cong (-2)^{50} - 2^{50} \pmod{13} \\
+24^{50} - 15^{50} \cong (11)^{50} - (2)^{50} \pmod{13} \\
+24^{50} - 15^{50} \cong (-2)^{50} - 2^{50} \pmod{13} \\
 
-    24^{50} - 15^{50} \cong +2^{50} - 2^{50} \pmod{13} \\
-    \text{Remainder is 0}
-    \end{array}
+24^{50} - 15^{50} \cong +2^{50} - 2^{50} \pmod{13} \\
+\text{Remainder is 0}
+\end{array}
 $$
 #
