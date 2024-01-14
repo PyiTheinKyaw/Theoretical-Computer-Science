@@ -70,5 +70,31 @@ $$
 a * b * c \cong 1.2.3 \pmod{5} \\
 6 \pmod {5} \\
 \text{Mod out, } 1 \pmod {6}
+$$
+#
+4. find the remainder when $317 * 5^{51}$ is divided by 6.
 
+Approach 1 (Pattern observation): 
+
+***4.1 Resolve $5^{51}$ as first,***
+$$
+5^1 \cong 5 \pmod{6} \\
+5^2 \cong 1 \pmod{6} \\
+5^3 \cong 5 \pmod{6} \\
+\ldots \\
+5^{51} \text{since, power of 5 is odd, then } 5^{51} \cong 5 \pmod{6}
+$$
+
+***4.2 Resolve $317$ as last,***
+$$
+317 - 6 * 52 = 5 \\
+317 \cong 5 \pmod{6}
+$$
+
+***Solve***
+$$
+317 * 5^{51} \cong 5 \pmod{6} * 5 \pmod{6} \\
+317 * 5^{51} \cong -1 \pmod{6} * -1 \pmod{6} \\
+317 * 5^{51} \cong 1 \pmod{6} \\
+\text{Since, remainder(R) is 1}
 $$
