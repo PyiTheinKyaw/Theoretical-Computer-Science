@@ -59,16 +59,18 @@ $$
 3. The remainder when the positive integers are divided by 5 are 1,2, and 3. Find the remainder when the product of the interger is divided by 5.
 
     Let the integers be a, b, and c, where:
-$$
+$$ \begin{array}{c}
 a \cong 1 \pmod 5 \\
 b \cong 2 \pmod 5 \\
 c \cong 3 \pmod 5
+\end{array}
 $$
 
-$$
+$$ \begin{array}{c}
 a * b * c \cong 1.2.3 \pmod{5} \\
 6 \pmod {5} \\
 \text{Mod out, } 1 \pmod {6}
+\end{array}
 $$
 #
 4. find the remainder when $317 * 5^{51}$ is divided by 6.
@@ -77,28 +79,31 @@ $$
 
     ***4.1 Resolve $5^{51}$ as first,***
 
-    $$
+    $$ \begin{array}{c}
     5^1 \cong 5 \pmod{6} \\
     5^2 \cong 1 \pmod{6} \\
     5^3 \cong 5 \pmod{6} \\
     \ldots \\
     5^{51} \text{since, power of 5 is odd, then } 5^{51} \cong 5 \pmod{6}
+    \end{array}
     $$
 
     ***4.2 Resolve $317$ as last,***
 
-    $$
+    $$ \begin{array}{c}
     317 - 6 * 52 = 5 \\
     317 \cong 5 \pmod{6}
+    \end{array}
     $$
 
     ***Solve***
 
-    $$
+    $$ \begin{array}{c}
     317 * 5^{51} \cong 5 \pmod{6} * 5 \pmod{6} \\
     317 * 5^{51} \cong -1 \pmod{6} * -1 \pmod{6} \\
     317 * 5^{51} \cong 1 \pmod{6} \\
     \text{Since, remainder(R) is 1}
+    \end{array}
     $$
 
 #
