@@ -37,11 +37,9 @@ $$
 ### $121.122.123$
 $$ \begin{array}{c}
 121 - 4 * 30 = 1, 121 \cong 1 \pmod{4} \\
-
 121 \cong 1 \pmod{4} \\ 
 122 \cong 2 \pmod{4} \\
 123 \cong 3 \pmod{4} \\
-
 121.122.123 \cong 1 \pmod{4} . 2 \pmod{4} . 3 \pmod{4} \\
 \cong 6 \pmod{4} \\
 \text{Mod out, } \cong 2 \pmod{4}
