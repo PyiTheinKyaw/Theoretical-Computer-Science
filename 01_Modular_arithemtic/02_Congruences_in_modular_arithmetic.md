@@ -95,7 +95,7 @@ $$
 #
 ## Mod n set of integers and "MOD OUT"
 
-"List the set of integers needed for $\pmod{6}$" which means we are listing the integers with cycle 6.
+"Substitute with any number but in the list the set of integers needed for $\pmod{6}$" which means we are listing the integers with cycle 6.
 
 1. Always start with 0.
 2. Always end one less than mod.
