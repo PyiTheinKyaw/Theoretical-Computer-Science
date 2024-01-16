@@ -58,7 +58,7 @@ $4 + 1 \cong 0 \pmod{5}$, That's why the inverse of 4 is 1.
 
 While modular arithmetic doesn't have a direct division operation, multiplicative inverses enable division-like results. To "divide" a by b modulo m, **we multiply a by the modular inverse of b**. 
 
-Be aware of properties 5, the **multiplicative inverse exists only for some, but not for all elements**.
+Be aware of properties 5, the **multiplicative inverse exists only for some, but not for all elements** for only $a$ and $n$ have to be relatively prime each other.
 
 **Example:** 
 
