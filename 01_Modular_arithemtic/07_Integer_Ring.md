@@ -1,16 +1,3 @@
-***For any element a in the ring, there is always the negative element −a such that a + (−a) ≡ 0 mod m, i.e., the additive inverse always exists.***
-
-Guess,
-
-$6.x \cong 1 \pmod{9}$
-
-$6.x$ have to be between {0,1,....,8}, because the integer ring $Z{m} = \{0, 1, 2, . . . , m − 1\}$
-
-It takes some effort to find the inverse (usually employing the Euclidean algorithm). However, there is an easy way of telling whether an inverse for a given element a exists or not by using GCD.
-
-in this case, GCD(6,9), only GCD is 1 means there is an element a exists.
-
-#
 # Integer rings in Modular Arithemetic
 Ring: The integer ring $Z_{m}$ consists of:
 1. The set $Z_{m}=\{0,1,2,...,m−1\}$
@@ -33,7 +20,7 @@ Ring: The integer ring $Z_{m}$ consists of:
 6. The **multiplicative inverse exists only for some, but not for all, elements**. Let $a \in Z$,the inverse $a−1$ is defined such that
 
 $$
-a·a−1 \cong 1 \pmod{m}
+a·a^{−1} \cong 1 \pmod{m}
 $$
 
 If an inverse exists for $a$, we can divide by this element since $\frac{b}{a} \cong b·a−1 \pmod{m}$.
@@ -47,7 +34,9 @@ In modular arithmetic, we don't have direct subtraction or division operations i
 
 To "subtract" $b$ from $a \pmod{m}$, we add the ***additive inverse*** of b to a. The additive inverse of b is the number that, when added to b, leaves a remainder of 0 when divided by m.
 
-Example: To calculate $7 - 4 \pmod{5}$, ***we add the inverse of 4 (which is 1)*** to 7: $7 - 4 \cong 7 + 1 \cong 8 ≡ 3 \pmod{5}$.
+**Example:**
+
+To calculate $7 - 4 \pmod{5}$, ***we add the inverse of 4 (which is 1)*** to 7: $7 - 4 \cong 7 + 1 \cong 8 ≡ 3 \pmod{5}$.
 
 Here is why, the set of mod 5 is $Z_{m} = \{0,1,2,3,4\}$. Then,
 
@@ -55,53 +44,51 @@ To solve this, $7 - 4 \pmod{5}$, we consider to replace with $-4$ with $1$ becau
 
 Note that: The term $(-a)$ is not negative $a$. In simpler terms, it's the **"reciprocal"** of the element that **"cancels out"** a when additied together.
 
-According to 
+According to properties 4, for each element a in the set, its **additive inverse** is the number $(-a)$ that, when added to a, leaves a remainder of 0 when divided by m which means additive inverse of $a$ have to be truth in following equation -
 
-#
+$$
+a+(−a)≡0 \pmod{m}
+$$
 
-- **Multiplicative Inverse:**
+So, in order to solve $7 - 4 \pmod{5}$, we have to find $-a$, in this case what is the inverse of $-4$ where set is $Z_{m} = \{0,1,2,3,4\}, m = 5, a = 4$.
 
-    **Here's a breakdown of the concept of multiplicative inverses in integer rings modulo m:**
+$4 + 1 \cong 0 \pmod{5}$, That's why the inverse of 4 is 1.
 
-**1. Multiplicative Inverse:**
+### **2. Division-like result.**
 
-- In mathematics, a multiplicative inverse of an element a is another element, typically denoted as a^(-1), that, when multiplied by a, yields the identity element for multiplication (which is 1 in most cases).
-- In simpler terms, it's the "reciprocal" of the element that "cancels out" a when multiplied together.
+While modular arithmetic doesn't have a direct division operation, multiplicative inverses enable division-like results. To "divide" a by b modulo m, **we multiply a by the modular inverse of b**. 
 
-**2. Key Difference from Additive Inverses:**
+Be aware of properties 5, the **multiplicative inverse exists only for some, but not for all elements**.
+
+**Example:** 
+
+To calculate $10 ÷ 3 \pmod{7}$, we multiply 10 by the inverse of 3 (which is 5): $10 ÷ 3 \cong 10 * 5 \cong 50 \cong 1 \pmod{7}$
+
+**How this is happen?**
+
+**As first, we have to make sure inverse is esists:** In order to find the inverse of a, denoted as $(a^{-1})$, we've to make sure inverse is exists in set. In order to confrim we can use $\frac{b}{a} \cong b·a−1 \pmod{m}$ or $GCD(a,m)$. If $GCD(a, m) = 1$, then a has a multiplicative inverse modulo m.
+
+Find the inverse, denoted as a⁻¹, using one of these methods:
+
+- **Extended Euclidean Algorithm**: This algorithm efficiently f**inds both the GCD and the coefficients** that can be used to express the GCD as a linear combination of a and m. The **coefficient of a becomes the inverse**.
+
+- **Trial and Error**: This method involves systematically multiplying a by numbers within the modulus range until you find a product that leaves a remainder of 1 when divided by m.
+
+- **Table of Inverses**: For small moduli, you can pre-compute a table of inverses to look up values quickly.
+
+**Only if inverse is exists in set**, inverse value have to make true following equation:
+
+$$
+a·a^{−1} \cong 1 \pmod{m}
+$$
+
+In this case, $3^{-1} = 5$ which solve this $(3 * 5 \cong 1 \pmod{7})$.
+
+
+### Key Difference from Additive Inverses:
 
 - While additive inverses *always* exist in integer rings modulo m, multiplicative inverses *only exist for certain elements*. This is a crucial distinction.
 
-**3. Definition in Integer Rings Modulo m:**
-
-- In an integer ring modulo m, an element a has a multiplicative inverse a^(-1) if and only if:
-    - a * a^(-1) ≡ 1 (mod m)
-- This means that multiplying a and a^(-1) together leaves a remainder of 1 when divided by m.
-
-**4. Determining Existence:**
-
-- To determine if a multiplicative inverse exists for a given element a in modulo m, we use the concept of **greatest common divisors (GCDs):**
-    - If the GCD of a and m is 1 (meaning they share no common factors other than 1), then a has a multiplicative inverse modulo m.
-    - If the GCD of a and m is greater than 1, then a does not have a multiplicative inverse modulo m.
-
-**5. Examples:**
-
-- **Modulo 7:**
-    - 3 has a multiplicative inverse (eventually 5), as 3 * 5 ≡ 1 (mod 7), a * a^(-1) ≡ 1 (mod m).
-    - 6 does not have a multiplicative inverse, as the GCD of 6 and 7 is 1.
-- **Modulo 10:**
-    - Only 1, 3, 7, and 9 have multiplicative inverses modulo 10.
-
-**6. Applications:**
-
-- Multiplicative inverses are essential in:
-    - Cryptography (e.g., RSA algorithm)
-    - Number theory (e.g., solving congruences)
-    - Abstract algebra (e.g., structure of fields and groups)
-
-**7. Key Points:**
-
-- The existence of multiplicative inverses depends on the specific element and the modulus m.
-- They are crucial for various mathematical operations and applications that rely on division within integer rings modulo m.
+#
 
 
