@@ -124,3 +124,46 @@ $\varphi(7000) = 200 * 4 * 3$
 $\varphi(7000) = 2400$
 
 So there are 2400 numbers that are less than 7000 and relatively prime to 7000.
+#
+
+# Euler theorm
+
+Euler theorm state that "*For every positive integer 'a' & 'n', which are said to be relative prime, then* 
+
+$$
+a^{\varphi(n)} \cong 1 \pmod{n}
+$$
+
+Euler's totient function is used to prove Euler theorm.
+
+Euler theorm is true, when $a$ and $n$ is relative prime. which means $GCD(a,n) = 1$
+
+***Example,***
+
+Prove Euler's theorm hold true for $a=3, n=10$. As first, check a and n are relatively prime?
+
+$GCD(a,n) = GCD(3,10) = 1$, then
+
+$a^{\varphi(n)} \cong 1 \pmod{n}$
+
+Let's prove that: $3^{\varphi(10)} \cong 1 \pmod{10}$ is true.
+
+$3^{\varphi(10)} \cong 1 \pmod{10}$
+
+***Solve for $\varphi(10)$ as frist,***
+
+$\varphi(10) = 10 * (1-\frac{1}{2}) (1-\frac{1}{5})$
+
+$\varphi(10) = 10 * \frac{1}{2} * \frac{4}{5}$
+
+$\varphi(10) = 2 * 1 * 2$
+
+$\varphi(10) = 4$
+
+***Then let prove Eluer Theorm,***
+
+$3^{\varphi(10)} \cong 1 \pmod{10}$
+
+$3^{4} \cong 1 \pmod{10}$
+
+$81 \cong 1 \pmod{10}$, Thefore, Euler's theorm holds true for $a=3, n=10$.
