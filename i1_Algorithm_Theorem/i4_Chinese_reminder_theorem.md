@@ -22,8 +22,9 @@ we can express as,
 $$
 X = (a_{1}.M_{1}.M_{1}^{-1}) + (a_{2}.M_{2}.M_{2}^{-1}) + \ldots +(a_{n}.M_{n}.M_{n}^{-1}) \pmod{M}
 $$
+#
 
-***Example:***
+### Example 1:
 
 ***Solve the following congruent using CRT.***
 
@@ -116,3 +117,106 @@ $X \cong 233 \cong 23 \pmod{105}$,
 **Answer x is 23.**
 
 CRT allow us to find X with different congruent but moduli are relatively prime.
+#
+
+### Example 2:
+
+***Solve the following congruent using CRT.***
+
+$4X \cong 5 \pmod{9}$
+
+$2X \cong 6 \pmod{20}$
+
+***Simplify the 1st congrest as first:***
+
+$4X \cong 5 \pmod{9}$
+
+$4X * 4^{-1} \cong 4^{-1} * 5 \pmod{9}$
+
+$X \cong 4^{-1} * 5 \pmod{9}$
+
+$X \cong 4^{-1} \pmod{9} * 5 \pmod{9} $
+
+$X \cong 35 \cong 8 \pmod{9}$
+
+***Simplify the 2nd congrest as second:***
+
+$2X \cong 6 \pmod{20}$
+
+$X \cong 3 \pmod{20}$
+
+Now, we got two congernt
+
+$X \cong 8 \pmod{9}$
+
+$X \cong 3 \pmod{20}$
+
+***Given that,***
+
+let $a_1 = 8, a_2 = 3$ and $m_1 = 9, m_2 = 20$ respectively.
+
+We have to find {$M_1, M_2, M_1^{-1}, M_2^{-1}, M$} as first.
+
+
+***Equation:***
+
+$$
+\sum_{i=1}^{3} a_i, M_i = (a_{i}.M_{i}.M_{i}^{-1}) \pmod{M}
+$$
+
+**Formula to find $M, M_i$,**
+
+1. $M = m_1 * m_i$
+
+2. $M_i = \frac{M}{m_i}$
+
+**Find $M$,**
+
+$M = 9 * 20 = 180$
+
+**Find $M_i$,**
+
+$M_1 = \frac{180}{9} = 20$
+
+$M_2 = \frac{180}{20} = 9$
+
+
+**Find Inverse $M_i^{-1}$,**
+
+$$
+M_i. M_i^{-1} \cong 1 \pmod{m_i}
+$$
+
+**For $M_{1}^{-1}$,**
+
+$M_1. M_1^{-1} \cong 1 \pmod{m_1}$
+
+$20 * M_1^{-1} \cong 1 \pmod{9}$
+
+$20 * 5 \cong 1 \pmod{9}$
+
+So, $M_{1}^{-1} = 5$
+
+**For $M_{2}^{-1}$,**
+
+$M_2. M_2^{-1} \cong 1 \pmod{m_2}$
+
+$9 * M_2^{-1} \cong 1 \pmod{20}$
+
+$9 * 9 \cong 1 \pmod{20}$
+
+So, $M_{2}^{-1} = 9$
+
+***Find $X$,***
+
+$X \cong (a_{1}.M_{1}.M_{1}^{-1}) + (a_{2}.M_{2}.M_{2}^{-1}) \pmod{M}$
+
+$X \cong (8 * 20 * 5) + (3 * 9 * 9) \pmod{180}$
+
+$X \cong 800 + 243 \pmod{180}$
+
+$X \cong 1043 \pmod{180}$
+
+$X = 143$
+
+**Answer x is 143.**
