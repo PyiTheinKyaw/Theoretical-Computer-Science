@@ -2,6 +2,94 @@
 
 ### Introduction to Division in MA.
 
+While solving congurent in division, there are three possible outcomes:
+
+- Unsolvable, no solutions
+- One solution
+- Multiple solutions
+
+***Congurent form:***
+
+$$
+ax + b \cong \pmod{m}
+$$
+
+In order to reconcile the situation, we have to answer following two questions. 
+
+- Is $a, m$ have $GCD = 1$? 
+- Is $GCD(a,m)|b$ (a is divisor of b)?
+
+***1. Unsolvalbe, no solutions.***
+
+$2x \cong 51 \pmod{8}$
+
+- First reconcile, $GCD(2,8) = 2$
+- Second reconcile, $2|51$,Ans: No.
+
+In this case, there is no solution to this congurent.
+#
+
+***2. one solution.***
+
+$2x \cong 13 \pmod{7}$
+
+- First reconcile, $GCD(2,7) = 1$
+- Second reconcile, $1|13$,Ans: ***Yes***.
+
+Tips: If GCD is 1, there is one solution. In this case,
+
+$2x \cong 13 \pmod{7}$
+
+$2x \cong 6 \pmod{7}$
+
+$\frac{2x}{2} \cong \frac{6}{2} \pmod{7}$
+
+$x \cong 3 \pmod{7}$
+#
+
+***3. Multiple solution (Three solutions).***
+
+$9x \cong 42 \pmod{6}$
+
+First reconcile, $GCD(9,6) = 3$
+
+Second reconcile, $3|42$,Ans: ***Yes***.
+
+$9x \cong 42 \pmod{6}$
+
+$\frac{9x}{3} \cong \frac{42}{3} \pmod{\frac{6}{3}}$
+
+$3x \cong 14 \pmod{2}$
+
+$3x \cong 0 \pmod{2}$
+
+$\frac{3x}{3} \cong \frac{0}{3} \pmod{2}$
+
+$x \cong 0 \pmod{2}$
+
+Another ways to solve using parameterize method,
+
+$$
+Y_{1T} = 2.T + R
+$$
+
+which is $b = q . t + r$, in this case:
+
+$x \cong 6 \pmod{7}$
+
+$b = 7*t + 6$
+
+$6 = 7*(0) + 6$
+
+$13 = 7*(1) + 6$
+
+$20 = 7*(2) + 6$
+
+So, $6 \cong 13 \cong 20 \pmod{7}$
+#
+
+
+
 ***If*** 
 $$
 ad \cong bd \pmod{n}
@@ -57,7 +145,6 @@ $$
 
 c) Solve for x (Cycling), $3x \cong 4 \pmod{7}$
 
-- There are no common divisor and also normal division doesn't work.
 
 $$ \begin{array}{c}
 3x \cong 4 \pmod{7} \\
