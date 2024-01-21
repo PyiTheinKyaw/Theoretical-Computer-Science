@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Learning Theoretical Computer Science
+        </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.2.1/marked.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const markdownElement = document.getElementById("markdown-content");
+
+                // Fetch the MD file locally using the server's URL
+                fetch("https://raw.githubusercontent.com/PyiTheinKyaw/Theoretical-Computer-Science/main/README.md")
+                .then(response => response.text())
+                .then(markdownContent => {
+                    const parsedHtml = marked.parse(markdownContent);
+                    markdownElement.innerHTML = parsedHtml;
+                })
+                .catch(error => {
+                    console.error("Error fetching Markdown file:", error);
+                    // Handle the error gracefully, e.g., display an error message
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="markdown-content"></div>
+    </body>
+</html>
