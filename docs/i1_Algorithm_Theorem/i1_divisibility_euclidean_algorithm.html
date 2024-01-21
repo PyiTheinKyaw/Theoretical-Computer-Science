@@ -16,10 +16,19 @@
             document.addEventListener("DOMContentLoaded", function() {
                 const markdownElement = document.getElementById("markdown-content");
 
+                
+
+
+
                 // Fetch the MD file locally using the server's URL
                 fetch("https://raw.githubusercontent.com/PyiTheinKyaw/Theoretical-Computer-Science/main/i1_Algorithm_Theorem/i1_divisibility_euclidean_algorithm.md")
                 .then(response => response.text())
                 .then(markdownContent => {
+                    const options = {
+                        throwOnError: false
+                    };
+                    marked.use(markedKatex(options));
+
                     const parsedHtml = marked.parse(markdownContent);
                     markdownElement.innerHTML = parsedHtml;
                 })
