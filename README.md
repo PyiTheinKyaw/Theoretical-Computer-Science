@@ -5,7 +5,7 @@ This repo is my study note while learning about Basic Math for Computer Science.
 - Algorithm & Theorm
     - [Euclidean algorithm](https://github.com)
         - which is used to find GCD or HCF.
-    - [Extened Eculidean algorithm (EEA)](/another.html)
+    - [Extened Eculidean algorithm (EEA)](another.html)
         - finding the greatest common divisor (GCD) of two integers. This EEA have been used in "Bezout Identity" to find a,b and also used to find GCD and MI.
     - Bezout Identity (In progress)
     - Chinese reminder theorm (CRI)
