@@ -5,14 +5,33 @@
         <title>
             Euclidean Algorithm
         </title>
-        <script src="https://cdn.jsdelivr.net/npm/marked-katex-extension@5.0.0/lib/index.umd.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.2.1/marked.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.js"></script>
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css">
         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.2.1/marked.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked-katex-extension@5.0.0/lib/index.umd.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css">
+
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
+            
         <script>
             document.addEventListener("DOMContentLoaded", function() {
+                
+
+                renderMathInElement(document.body, {
+                    // customised options
+                    // • auto-render specific keys, e.g.:
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '$', right: '$', display: true},
+                        {left: '\\(', right: '\\)', display: false},
+                        {left: '\\[', right: '\\]', display: true}
+                    ],
+                    // • rendering keys, e.g.:
+                    throwOnError : false
+                });
+                
                 const markdownElement = document.getElementById("markdown-content");
 
                 // Fetch the MD file locally using the server's URL
@@ -20,22 +39,22 @@
                 .then(response => response.text())
                 .then(markdownContent => {
                     
-                    const options = {
-                        throwOnError: false,
-                        renderer: new marked.Renderer(), 
-                        gfm: true,
-                        extensions: [markedKatex]
-                    };
+                    // const options = {
+                    //     throwOnError: false,
+                    //     renderer: new marked.Renderer(), 
+                    //     gfm: true,
+                    //     extensions: [markedKatex]
+                    // };
 
                     const optionss = {
-                        throwOnError: false
+                        throwOnError: false,
+                        displayMode: true,
                     };
-                    marked.use(markedKatex(options));
-
+                    marked.use(markedKatex(optionss));
+                    
                     // marked.use(options)
-
-                    const parsedHtml = marked.parse(markdownContent);
-                    markdownElement.innerHTML = parsedHtml;
+                    // const parsedHtml = marked.parse(markdownContent);
+                    markdownElement.innerHTML = marked.parse("katex: $c = \\pm\\sqrt{a^2 + b^2}$");
                 })
                 .catch(error => {
                     console.error("Error fetching Markdown file:", error);
@@ -45,6 +64,9 @@
         </script>
     </head>
     <body>
-        <div id="markdown-content"></div>
+        <span class="math-inline">
+            $1 = 2 \implies ab$
+        </span>
+        <div id="markdown-content" class="math-inline"></div>
     </body>
 </html>
