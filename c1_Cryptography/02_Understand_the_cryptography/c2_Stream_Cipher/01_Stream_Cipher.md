@@ -4,6 +4,15 @@ Under Symmetric Cyptography, there are two categories, they are:
 1) Stream Cipher  
 2) Block Cipher
 
+***Defination in this chapter:***
+
+***Unconditional Security:***
+A cryptosystem is unconditionally or information-theoretically secure if it cannot be broken even with infinite computational resources.
+
+***Computational Security***
+A cryptosystem is computationally secure if the best known algorithm for breaking it requires at least $t$ operations.
+
+#
 ### Stream Ciphers
 Stream ciphers ***encrypt bits individually***. This is achieved by **adding a bit from a key stream to a plaintext bit.**  There are 
 - **synchronous stream ciphers** where the key stream *depends only on the key*, and 
@@ -82,11 +91,9 @@ This should look familiar to most readers: It is the truth table of the exclusiv
 1|0|1|
 1|1|0|
 
-Depending on the key bit, the ciphertext $y_i$ is either a zero (si =0) or one (si =1). If the key bit si behaves perfectly randomly, i.e., it is unpredictable and has exactly a 50% chance to have the value 0 or 1, then both possible ciphertexts also occur with
-a 50% likelihood. Likewise, if we encrypt the plaintext bit xi = 1, we are on line 3 or 4 of the truth table. Again, depending on the value of the key stream bit si, there is a 50% chance that the ciphertext is either a 1 or a 0.
+Depending on the key bit, the ciphertext $y_i$ is either a zero ($s_i =0$) or one ($s_i =1$). If the key bit si behaves perfectly randomly, i.e., it is unpredictable and has exactly a 50% chance to have the value 0 or 1, then both possible ciphertexts also occur with a 50% likelihood. Likewise, if we encrypt the plaintext bit $x_i = 1$, we are on line 3 or 4 of the truth table. Again, depending on the value of the key stream bit $s_i$, there is a 50% chance that the ciphertext is either a 1 or a 0.
 
-This the reason why XOR gate is used. We just observed that the **XOR function is perfectly balanced**, i.e., by observing
-an output value, there is exactly a 50% chance for any value of the input bits. This distinguishes the XOR gate from other Boolean functions such as the OR, AND or NAND gate. Moreover, AND and NAND gates are not invertible.
+This the reason why XOR gate is used. We just observed that the **XOR function is perfectly balanced**, i.e., by observing an output value, there is exactly a 50% chance for any value of the input bits. This distinguishes the XOR gate from other Boolean functions such as the OR, AND or NAND gate. Moreover, AND and NAND gates are not **invertible**.
 
 ### What Exactly Is the Nature of the Key Stream?
 
