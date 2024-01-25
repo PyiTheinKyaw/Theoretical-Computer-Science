@@ -1,6 +1,6 @@
 ## Problem 2.1
 
-### Definition 2.1.1
+**Definition 2.1.1**
 
 Stream Cipher Encryption and Decryption. The plaintext, the ciphertext and the key stream consist of individual bits,
 i.e., $x_i , y_i , s_i \in {0, 1}$
@@ -8,6 +8,8 @@ i.e., $x_i , y_i , s_i \in {0, 1}$
 Encryption: $y_i = e_{s_i} (x_i) \cong x_i + s_i \pmod{2}$
 
 Decryption: $x_i = d_{s_i} (y_i) \cong y_i + s_i \pmod{2}$
+
+**Problem**
 
 The stream cipher described in Definition 2.1.1 can easily be generalized to work in alphabets other than the binary one. For manual encryption, an especially useful one is a stream cipher that operates on letters.
 
@@ -24,20 +26,16 @@ The stream cipher described in Definition 2.1.1 can easily be generalized to wor
 
 Let says $A,B,\dots,Z$ is number $0,1,2,\ldots,25$.
 
+***1. Encryption, Decryption functions***
+
 Encryption: $y_i = e_{s_i} (x_i) \cong x_i + s_i \pmod{25}$
 
-Decryption: 
+Decryption: $x_i = d_{s_i} (y_i) \cong y_i - s_i \pmod{26}$
 
-$d_{s_i} (y_i) ≡ y_i + s_i \pmod{26}$
+***2. Plain text is `kaspar hauser`***
 
-≡ (xi + si ) + si mod 2
-≡ xi + si + si mod 2
-≡ xi + 2 si mod 2
-≡ xi + 0 mod 2
-≡ xi mod 2 Q.E.D.
+***3. How was the young man murdered?***
 
+Fatal stab wound
 
-
-
-$x_i = d_{s_i} (y_i) \cong y_i + s_i \pmod{25}$
-
+Five days later, on 14 December 1833, Hauser came home with a deep wound in his left breast. By his account, he had been lured to the Ansbach Court Garden, where a stranger stabbed him while giving him a bag.
