@@ -16,7 +16,7 @@ The stream cipher described in Definition 2.1.1 can easily be generalized to wor
 1. Develop a scheme which operates with the letters $A, B,. . ., Z$ represented by the numbers $0,1,. . .,25$. What does the key (stream) look like? What are the encryption and decryption functions?
 
 2. Decrypt the following cipher text:
-`bsaspp kkuosp` which was encrypted using the key: `rsidpy dkawoa`
+`bsaspp kkuosp` which was encrypted using the key: `rsidpy dkawoy`
 
 3. How was the young man murdered?
 
@@ -28,7 +28,7 @@ Let says $A,B,\dots,Z$ is number $0,1,2,\ldots,25$.
 
 ***1. Encryption, Decryption functions***
 
-Encryption: $y_i = e_{s_i} (x_i) \cong x_i + s_i \pmod{25}$
+Encryption: $y_i = e_{s_i} (x_i) \cong x_i + s_i \pmod{26}$
 
 Decryption: $x_i = d_{s_i} (y_i) \cong y_i - s_i \pmod{26}$
 
