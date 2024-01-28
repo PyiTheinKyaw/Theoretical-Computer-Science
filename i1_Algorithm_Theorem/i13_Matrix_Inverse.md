@@ -1,6 +1,5 @@
 # Matrix Inverse
 
-
 In linear algebra, the inverse of a matrix can be used to solve a system of linear equations. Here's how it works:
 
 **System of Linear Equations:**
@@ -128,9 +127,206 @@ A =
 \right]
 $$
 
+$$
+A^T = \\
++
+\left[
+\begin{matrix}
+3 & 4 \\
+1 & 3
+\end{matrix}
+\right]
 
+-
+\left[
+\begin{matrix}
+3 & 4 \\
+2 & 3
+\end{matrix}
+\right]
 
-#
++
+\left[
+\begin{matrix}
+3 & 3 \\
+2 & 1
+\end{matrix}
+\right]
+$$
+
+$$
+-
+\left[
+\begin{matrix}
+1 & 1 \\
+1 & 3
+\end{matrix}
+\right]
+
++
+\left[
+\begin{matrix}
+1 & 1 \\
+2 & 3
+\end{matrix}
+\right]
+
+-
+\left[
+\begin{matrix}
+1 & 1 \\
+2 & 1
+\end{matrix}
+\right]
+$$
+
+$$
++
+\left[
+\begin{matrix}
+1 & 1 \\
+3 & 4
+\end{matrix}
+\right]
+
+-
+\left[
+\begin{matrix}
+1 & 1 \\
+3 & 4
+\end{matrix}
+\right]
+
++
+\left[
+\begin{matrix}
+1 & 1 \\
+3 & 3
+\end{matrix}
+\right]
+$$
+
+$$
+A^T = 
+\left[
+\begin{matrix}
++5 & -1 & -3 \\
+-2 & +1 & +1 \\
+1 & -1 & 0
+\end{matrix}
+\right]
+$$
+
+***Step 3: Interchange members of matrix to get $A^T$,***
+
+$$
+A^T = 
+\left[
+\begin{matrix}
++5 & -1 & -3 \\
+-2 & +1 & +1 \\
+1 & -1 & 0
+\end{matrix}
+\right] =
+
+\left[
+\begin{matrix}
++5 &  &  \\
+ & +1 &  \\
+ &  & 0
+\end{matrix}
+\right] =
+
+\left[
+\begin{matrix}
++5 & -2 & 1 \\
+-1 & +1 & -1 \\
+-3 & +1 & 0
+\end{matrix}
+\right] 
+$$
+
+***Step 4: Find the inverse of $A^{-1}$***
+In order to find $A^{-1}$, 
+
+$$ 
+A^{-1} = \frac{1}{|A|}A^T
+$$
+
+According to calculation,
+
+$$
+A^{T} =
+\left[
+\begin{matrix}
++5 & -2 & 1 \\
+-1 & +1 & -1 \\
+-3 & +1 & 0
+\end{matrix}
+\right],
+|A| = 1
+$$
+
+After subsituation, we got $A^{-1}$ which is
+$$
+A^{-1} =
+\left[
+\begin{matrix}
++5 & -2 & 1 \\
+-1 & +1 & -1 \\
+-3 & +1 & 0
+\end{matrix}
+\right]
+$$
+
+***Step 5: Final step, find $x$ in matrix equation***
+
+Equation states that:
+
+$$
+Ax = b \\
+x = A^{-1}.b
+$$
+
+$$
+x = 
+\left[
+\begin{matrix}
++5 & -2 & 1 \\
+-1 & +1 & -1 \\
+-3 & +1 & 0
+\end{matrix}
+\right].
+\left[
+\begin{matrix}
+6 \\
+20 \\
+13
+\end{matrix}
+\right]
+$$
+
+$$
+x = 
+\left[
+\begin{matrix}
+30 - 40 + 13 \\
+-6 + 20 - 13 \\
+-18 + 20 + 0 \\
+\end{matrix}
+\right] =
+
+\left[
+\begin{matrix}
+3 \\
+1 \\
+2 \\
+\end{matrix}
+\right]
+$$
+
+***Since $x$ is matrix form and we knows that $x = 3, y =1, z=2$.***
+
 
 ## Cramer's Rule
 
