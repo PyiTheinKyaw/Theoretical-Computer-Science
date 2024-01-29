@@ -42,9 +42,9 @@ fn main() {
 
     println!("===================================");
     println!("Step4: Decrypt cipher text by using generated key stream");
-    let plain_text = decryption(s_i, 45, "j5a0edj2b");
+    let plain_text = decryption(s_i, 45, junk_cipher);
 
-    println!("Incoming cipher text on network: j5a0edi2b");
+    println!("Incoming cipher text on network: {:?}", junk_cipher);
     println!("plain text: {:?}", plain_text);
 }
 

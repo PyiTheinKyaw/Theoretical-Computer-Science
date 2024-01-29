@@ -1,4 +1,4 @@
-# Problem 2.11
+# Problem 2.11 (Known-plaintext Attack on LFSRs)
 
 ![Question of problem 2.1](../assets/problem2_11.png)
 
@@ -240,3 +240,13 @@ p_5 \\
 $$
 
 **Answer:** $p_0 = p_1 = 1$, $p_2 = p_3 = p_4 = p_5 = 0$ respectivelly.
+
+***4. Where does the thing after WPI live?***
+
+![Find the x](../assets/problem2_11_5.png)
+
+According to the Plain text: **"WOMBAT"**
+
+***5. What type of attack did we perform?***
+
+We did ***("Known-plaintext Attack")***.
